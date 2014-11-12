@@ -6,10 +6,7 @@ body{
   width: 100%;
   height: auto;
   background-image: url("../image/background.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-repeat: repeat;
 }
 .content{
 	width: 900px;
