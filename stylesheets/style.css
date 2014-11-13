@@ -1,23 +1,46 @@
-/*
-Errno::ENOENT: No such file or directory - stylesheets/style.scss
+body {
+  margin: 0px;
+  padding: 0px; }
 
-Backtrace:
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:481:in `read'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:481:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:293:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/plugin.rb:108:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:370:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:50:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.7/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - stylesheets/style.scss"; }
+.container {
+  width: 100%;
+  height: auto;
+  background-image: url("../image/background.png");
+  background-repeat: repeat; }
+
+.content {
+  width: 900px;
+  width: 1100px;
+  margin: 0 auto;
+  height: auto;
+  padding: 80px 80px; }
+
+.header {
+  font-family: Chalkboard;
+  font-size: 55px;
+  line-height: 1.6;
+  color: #f5f5f5;
+  text-align: center; }
+
+h1 {
+  font-family: Chalkboard SE;
+  font-size: 35px;
+  line-height: 1.6;
+  color: #999999;
+  text-align: center;
+  padding: 40px 20px; }
+
+li {
+  font-family: Chalkboard SE;
+  font-size: 25px;
+  line-height: 1.6;
+  color: #f5f5f5;
+  max-width: 460px;
+  padding: 10px 10px;
+  margin: 0 auto; }
+
+ul li ul li {
+  font-family: Chalkboard SE;
+  font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
