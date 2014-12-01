@@ -10,24 +10,34 @@
 	<script type="text/javascript" src="scripts/fsvs.js"></script>
 	<script>
 		$(document).ready( function() {
-	// The HTML tag must have a class of fsvs
-	var fsvs = $.fn.fsvs({
-		speed : 1000
-	});
-});
+			var slider = $.fn.fsvs({
+			speed : 5000,
+			bodyID : 'fsvs-body',
+			selector : '> .slide',
+			mouseSwipeDisance : 40,
+			afterSlide : function(){},
+			beforeSlide : function(){},
+			endSlide : function(){},
+			mouseWheelEvents : true,
+			mouseDragEvents : true,
+			touchEvents : true,
+			arrowKeyEvents : true,
+			pagination : true,
+			nthClasses : false,
+			detectHash : true
+			});
+		});
     </script>
 		
 	</head>
 	<body>
 		<div id="fsvs-body">
-		<div class="container">
-			<div class="content">
-				<div class="header">
-					Checklist for Web Design
-					<hr />
-				</div>
-				<div class="slide">
-				<h1> HTML rules </h1>
+	        <div class="slide">
+	        	<h1>Checklist for Web Design</h1>
+					<hr>
+			</div>
+			<div class="slide">
+				<h2> HTML rules </h2>
 				<ul>
 					<li> Tags are always surrounded by angle brackets </li>
 					<li> Most tags come in pairs and surround the material they affect </li>
@@ -35,9 +45,9 @@
 					<li> When you start a tag within another tag,<br> you have to close that inner tag before closing the outer tag </li>
 					<li> Many tags have can take arguments that change the tag's behavior </li>
 				</ul>
-				</div>
-				<div class="slide">
-				<h1> CSS rules </h1>
+			</div>
+			<div class="slide">
+				<h2> CSS rules </h2>
 				<ul>
 					<li> Any HTML element can be a CSS selector </li>
 					<li> A simple selector can have different classes </li>
@@ -46,9 +56,9 @@
 					<li> You can assign values to properties of CSS classes and elements </li>
 					<li> A property is assigned to a selector in order to change its style </li>
 				</ul>
-				</div>
-				<div class="slide">
-				<h1> Technical and file management rules </h1>
+			</div>
+			<div class="slide">
+				<h2> Technical and file management rules </h2>
 				<ul>
 					<li> Avoid extra long folder names and complicated folder structures but use well-named filenames instead </li>
 					<li> Use underscores between elements </li>
@@ -56,8 +66,9 @@
 					<li> Elements should be ordered from general to specific detail of importance as much as possible </li>
 					<li> This is also true when elements include date and time stamps </li>
 				</ul>
-				</div>
-				<h1> Content </h1>
+			</div>
+			<div class="slide">
+				<h2> Content </h2>
 				<ul>
 					<li> The content meets user needs, goals, and interests </li>
 					<li> The content is in a usable format, including headings, bulleted lists, tables, white space, or similar techniques is appropriate </li>
@@ -65,8 +76,9 @@
 					<li> Use attention grabbing headlines </li>
 					<li> Use consistent voice </li>
 				</ul>
-			   </div>
-				<h1> Design foundations </h1>
+			</div>
+			<div class="slide">
+				<h2> Design foundations </h2>
 				<ul>
 					<li> Typography
 						<ul>
@@ -101,14 +113,18 @@
 						</ul>
 					</li>
 				</ul>
-				<h1> Saving images correctly </h1>
+			</div>
+			<div class="slide">
+				<h2> Saving images correctly </h2>
 				<ul>
 					<li> Compress images with the right format at the lowest acceptable quality level </li>
 					<li> Look into using WebP for your image needs </li>
 					<li> Save your images with smaller sizes to improve your pages' load times </li>
 					<li> Investigate other interesting ways to get better compression, or transparency </li>
 				</ul>
-				<h1> Accessibility/usability </h1>
+			</div>
+			<div class="slide">
+				<h2> Accessibility/usability </h2>
 				<ul>
 					<li> The background and text have appropriate contrast </li>
 					<li> The website loads within 3 seconds </li>
@@ -118,7 +134,9 @@
 					<li> The design, layout and organization of the site are professional and consistent </li>
 					<li> The navigation is clear, well organized and does not overwhelm the user </li>
 				</ul>
-				<h1> Code Validation </h1>
+			</div>
+			<div class="slide">
+				<h2> Code Validation </h2>
 				<ul>
 					<li> Validate HTML and CSS </li>
 					<li> Validate Links  </li>
@@ -126,7 +144,5 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-
 	</body>
 </html>
