@@ -1,116 +1,132 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>checklist</title>
-    <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
-    <script src="//use.typekit.net/ibs7vds.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-
-</head>
-<body>
-	<section class="container">
-		<div class="content">
-			<div class="header">
-			Checklist for Web Design
-			<hr />
-		    </div>
-			 <h1> HTML rules </h1>
-			   <ul>
-			   	  <li> Tags are always surrounded by angle brackets </li>
-			   	  <li> Most tags come in pairs and surround the material they affect </li>
-			   	  <li> The second tag always starts with a forward slash </li>
-			   	  <li> When you start a tag within another tag,<br> you have to close that inner tag before closing the outer tag </li>
-			   	  <li> Many tags have can take arguments that change the tag's behavior </li>
-			   	</ul>
-			  <h1> CSS rules </h1>
-			    <ul>
-			       <li> Any HTML element can be a CSS selector </li>
-			       <li> A simple selector can have different classes </li>
-			       <li> Classes may also be declared without an associated element </li>
-			       <li> ID selectors target only one unique element at a time </li>
-			       <li> You can assign values to properties of CSS classes and elements </li>
-			       <li> A property is assigned to a selector in order to change its style </li>
-			     </ul>
-			   <h1> Technical and file management rules </h1>
-			     <ul>
-			     	<li> Avoid extra long folder names and complicated folder structures but use well-named filenames instead </li>
-			     	<li> Use underscores between elements </li>
-			     	<li> Use hyphens between words within an element or capitalize the first letter of each word within an element </li>
-			     	<li> Elements should be ordered from general to specific detail of importance as much as possible </li>
-			     	<li> This is also true when elements include date and time stamps </li>
-			     </ul>
-			   <h1> Content </h1>
-			     <ul>
-			     	<li> The content meets user needs, goals, and interests </li>
-			     	<li> The content is in a usable format, including headings, bulleted lists, tables, white space, or similar techniques is appropriate </li>
-			     	<li> The customer needs to get benefits from the content </li>
-			     	<li> Use attention grabbing headlines </li>
-			     	<li> Use consistent voice </li>
-			     </ul>
-			   <h1> Design foundations </h1>
-			     <ul>
-			     	<li> Typography
-			     		<ul>
-			     			<li> Use Web fonts and Google Fonts </li>
-			     	        <li> Use consistent styles </li>
-			     	        <li> Make good use of white space </li>
-			     	        <li> No more than 50-60 characters should be used per line </li>
-			     	    </ul>
-			     	 </li>
-			     	 <li> Color theory
-			     	 	<ul>
-			     	 		<li> Pages provide high contrast between text and background to make it easy to read </li>
-			     	 		<li> Text and link colors are clearly different from one another </li>
-			     	 		<li> The colors fit the theme </li>
-			     	 		<li> The pages use color consistently </li>
-			     	 	</ul>
-			     	</li>
-			     	<li> Style tiles
-			     		<ul>
-			     			<li> Contain sample user interface elements </li>
-			     			<li> Define a color scheme </li>
-			     			<li> Show how typographical design will be used </li>
-			     			<li> Show the relationship between the client's brand and the proposed design </li>
-			     		</ul>
-			     	</li>
-			     	<li> Grid
-			     		<ul>
-			     			<li> Grids provide organization and visual balance </li>
-			     			<li> Grid columns provide the structure for the content columns </li>
-			     			<li> Grids used in responsive web design usually consist of 12 or 24 columns </li>
-			     			<li> The horizontal space the grid takes up - the width - grows and shrinks with the available display space </li>
-			     		</ul>
-			     	</li>
-			     </ul>
-			  <h1> Saving images correctly </h1>
-			     <ul>
-			     	<li> Compress images with the right format at the lowest acceptable quality level </li>
-			     	<li> Look into using WebP for your image needs </li>
-			     	<li> Save your images with smaller sizes to improve your pages' load times </li>
-			     	<li> Investigate other interesting ways to get better compression, or transparency </li>
-			     </ul>
-			  <h1> Accessibility/usability </h1>
-			     <ul>
-			     	<li> The background and text have appropriate contrast </li>
-			     	<li> The website loads within 3 seconds </li>
-			     	<li> The site logo is easy to find and links to the home page </li>
-			     	<li> The About Us, Contact Us and Home links are easy to find </li>
-			     	<li> The text on the page is easy to read </li>
-			     	<li> The design, layout and organization of the site are professional and consistent </li>
-			     	<li> The navigation is clear, well organized and does not overwhelm the user </li>
-			     </ul>
-			  <h1> Code Validation </h1>
-			     <ul>
-			     	<li> Validate HTML and CSS </li>
-			     	<li> Validate Links  </li>
-			     	<li> Can be read by different browsers </li>
-			     </ul>
+<html class="fsvs" lang="en">
+	<head>
+		<title>checklist</title>
+		<link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+		<script src="//use.typekit.net/ibs7vds.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="scripts/fsvs.js"></script>
+	<script>
+		$(document).ready( function() {
+	// The HTML tag must have a class of fsvs
+	var fsvs = $.fn.fsvs({
+		speed : 1000
+	});
+});
+    </script>
+		
+	</head>
+	<body>
+		<div id="fsvs-body">
+		<div class="container">
+			<div class="content">
+				<div class="header">
+					Checklist for Web Design
+					<hr />
+				</div>
+				<div class="slide">
+				<h1> HTML rules </h1>
+				<ul>
+					<li> Tags are always surrounded by angle brackets </li>
+					<li> Most tags come in pairs and surround the material they affect </li>
+					<li> The second tag always starts with a forward slash </li>
+					<li> When you start a tag within another tag,<br> you have to close that inner tag before closing the outer tag </li>
+					<li> Many tags have can take arguments that change the tag's behavior </li>
+				</ul>
+				</div>
+				<div class="slide">
+				<h1> CSS rules </h1>
+				<ul>
+					<li> Any HTML element can be a CSS selector </li>
+					<li> A simple selector can have different classes </li>
+					<li> Classes may also be declared without an associated element </li>
+					<li> ID selectors target only one unique element at a time </li>
+					<li> You can assign values to properties of CSS classes and elements </li>
+					<li> A property is assigned to a selector in order to change its style </li>
+				</ul>
+				</div>
+				<div class="slide">
+				<h1> Technical and file management rules </h1>
+				<ul>
+					<li> Avoid extra long folder names and complicated folder structures but use well-named filenames instead </li>
+					<li> Use underscores between elements </li>
+					<li> Use hyphens between words within an element or capitalize the first letter of each word within an element </li>
+					<li> Elements should be ordered from general to specific detail of importance as much as possible </li>
+					<li> This is also true when elements include date and time stamps </li>
+				</ul>
+				</div>
+				<h1> Content </h1>
+				<ul>
+					<li> The content meets user needs, goals, and interests </li>
+					<li> The content is in a usable format, including headings, bulleted lists, tables, white space, or similar techniques is appropriate </li>
+					<li> The customer needs to get benefits from the content </li>
+					<li> Use attention grabbing headlines </li>
+					<li> Use consistent voice </li>
+				</ul>
+			   </div>
+				<h1> Design foundations </h1>
+				<ul>
+					<li> Typography
+						<ul>
+							<li> Use Web fonts and Google Fonts </li>
+							<li> Use consistent styles </li>
+							<li> Make good use of white space </li>
+							<li> No more than 50-60 characters should be used per line </li>
+						</ul>
+					</li>
+					<li> Color theory
+						<ul>
+							<li> Pages provide high contrast between text and background to make it easy to read </li>
+							<li> Text and link colors are clearly different from one another </li>
+							<li> The colors fit the theme </li>
+							<li> The pages use color consistently </li>
+						</ul>
+					</li>
+					<li> Style tiles
+						<ul>
+							<li> Contain sample user interface elements </li>
+							<li> Define a color scheme </li>
+							<li> Show how typographical design will be used </li>
+							<li> Show the relationship between the client's brand and the proposed design </li>
+						</ul>
+					</li>
+					<li> Grid
+						<ul>
+							<li> Grids provide organization and visual balance </li>
+							<li> Grid columns provide the structure for the content columns </li>
+							<li> Grids used in responsive web design usually consist of 12 or 24 columns </li>
+							<li> The horizontal space the grid takes up - the width - grows and shrinks with the available display space </li>
+						</ul>
+					</li>
+				</ul>
+				<h1> Saving images correctly </h1>
+				<ul>
+					<li> Compress images with the right format at the lowest acceptable quality level </li>
+					<li> Look into using WebP for your image needs </li>
+					<li> Save your images with smaller sizes to improve your pages' load times </li>
+					<li> Investigate other interesting ways to get better compression, or transparency </li>
+				</ul>
+				<h1> Accessibility/usability </h1>
+				<ul>
+					<li> The background and text have appropriate contrast </li>
+					<li> The website loads within 3 seconds </li>
+					<li> The site logo is easy to find and links to the home page </li>
+					<li> The About Us, Contact Us and Home links are easy to find </li>
+					<li> The text on the page is easy to read </li>
+					<li> The design, layout and organization of the site are professional and consistent </li>
+					<li> The navigation is clear, well organized and does not overwhelm the user </li>
+				</ul>
+				<h1> Code Validation </h1>
+				<ul>
+					<li> Validate HTML and CSS </li>
+					<li> Validate Links  </li>
+					<li> Can be read by different browsers </li>
+				</ul>
+			</div>
 		</div>
-   </section>
- </body>
+	</div>
+
+	</body>
 </html>
-
-
-
-
-
