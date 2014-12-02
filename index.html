@@ -1,148 +1,182 @@
 <!DOCTYPE html>
-<html class="fsvs" lang="en">
+<html>
 	<head>
 		<title>checklist</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link href="stylesheets/style.css" type="text/css" rel="stylesheet">
-		<script src="//use.typekit.net/ibs7vds.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="scripts/fsvs.js"></script>
-	<script>
-		$(document).ready( function() {
-			var slider = $.fn.fsvs({
-			speed : 5000,
-			bodyID : 'fsvs-body',
-			selector : '> .slide',
-			mouseSwipeDisance : 40,
-			afterSlide : function(){},
-			beforeSlide : function(){},
-			endSlide : function(){},
-			mouseWheelEvents : true,
-			mouseDragEvents : true,
-			touchEvents : true,
-			arrowKeyEvents : true,
-			pagination : true,
-			nthClasses : false,
-			detectHash : true
+		<link href="stylesheets/jquery.pagepiling.css" type="text/css" rel="stylesheet">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="scripts/jquery.pagepiling.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+			    $('#pagepiling').pagepiling({
+			        menu: null,
+			        direction: 'vertical',
+			        verticalCentered: true,
+			        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000', '#f2f2f2', '#4BBFC3', '#7BAABE', '#7BAABE','#000','#4BBFC3'], 
+			        anchors: ['title-row', 'html-rules', 'css-rules', 'file-rules', 'content-rules', 'typography', 'color', 'style-tiles', 'Grid', 'saving','accedssibility','code-rules'],
+    				//menu: '#myMenu'
+			        scrollingSpeed: 700,
+			        easing: 'swing',
+			        loopBottom: false,
+			        loopTop: false,
+			        css3: true,
+			        navigation: {
+			            'textColor': '#000',
+			            'bulletsColor': '#000',
+			            'position': 'right',
+			            'tooltips': ['section1', 'section2', 'section3', 'section4']
+			        },
+			        normalScrollElements: null,
+			        normalScrollElementTouchThreshold: 5,
+			        touchSensitivity: 5,
+			        keyboardScrolling: true,
+			        sectionSelector: '.section',
+			        animateAnchor: false,
+
+
+			        //events
+			        onLeave: function(index, nextIndex, direction){},
+			        afterLoad: function(anchorLink, index){},
+			        afterRender: function(){},
+			    });
 			});
-		});
-    </script>
-		
-	</head>
+
+		</script>
+
+    </head>
 	<body>
-		<div id="fsvs-body">
-	        <div class="slide">
-	        	<h1>Checklist for Web Design</h1>
-					<hr>
-			</div>
-			<div class="slide">
-				<h2> HTML rules </h2>
-				<ul>
-					<li> Tags are always surrounded by angle brackets </li>
-					<li> Most tags come in pairs and surround the material they affect </li>
-					<li> The second tag always starts with a forward slash </li>
-					<li> When you start a tag within another tag,<br> you have to close that inner tag before closing the outer tag </li>
-					<li> Many tags have can take arguments that change the tag's behavior </li>
+	       <nav id="nav">
+		   		<ul class="nav">
+					<li><a data-menuanchor="html-rules" href="#html-rules">HTML rules</a></li>
+					<li><a data-menuanchor="css-rules" href="#css-rules">CSS rules</a></li>
+					<li><a data-menuanchor="file-rules" href="#file-rules">Technical and file management rules</a></li>
+					<li><a data-menuanchor="content-rules" href="#content-rules">Content</a></li>
+					<li><a data-menuanchor="typography" href="#typography">Typography</a></li>
+					<li><a data-menuanchor="color" href="#color">Color theory</a></li>
+					<li><a data-menuanchor="style-tiles" href="#style-tiles">Style tiles</a></li>
+					<li><a data-menuanchor="Grid" href="#Grid">Grid</a></li>
+					<li><a data-menuanchor="saving" href="#saving">Saving images correctly</a></li>
+					<li><a data-menuanchor="accedssibility" href="#accedssibility">Accessibility</a></li>
+					<li><a data-menuanchor="code-rules" href="#code-rules">Code Validation</a></li>
 				</ul>
-			</div>
-			<div class="slide">
-				<h2> CSS rules </h2>
-				<ul>
-					<li> Any HTML element can be a CSS selector </li>
-					<li> A simple selector can have different classes </li>
-					<li> Classes may also be declared without an associated element </li>
-					<li> ID selectors target only one unique element at a time </li>
-					<li> You can assign values to properties of CSS classes and elements </li>
-					<li> A property is assigned to a selector in order to change its style </li>
-				</ul>
-			</div>
-			<div class="slide">
-				<h2> Technical and file management rules </h2>
-				<ul>
-					<li> Avoid extra long folder names and complicated folder structures but use well-named filenames instead </li>
-					<li> Use underscores between elements </li>
-					<li> Use hyphens between words within an element or capitalize the first letter of each word within an element </li>
-					<li> Elements should be ordered from general to specific detail of importance as much as possible </li>
-					<li> This is also true when elements include date and time stamps </li>
-				</ul>
-			</div>
-			<div class="slide">
-				<h2> Content </h2>
-				<ul>
-					<li> The content meets user needs, goals, and interests </li>
-					<li> The content is in a usable format, including headings, bulleted lists, tables, white space, or similar techniques is appropriate </li>
-					<li> The customer needs to get benefits from the content </li>
-					<li> Use attention grabbing headlines </li>
-					<li> Use consistent voice </li>
-				</ul>
-			</div>
-			<div class="slide">
-				<h2> Design foundations </h2>
-				<ul>
-					<li> Typography
-						<ul>
-							<li> Use Web fonts and Google Fonts </li>
-							<li> Use consistent styles </li>
-							<li> Make good use of white space </li>
-							<li> No more than 50-60 characters should be used per line </li>
-						</ul>
-					</li>
-					<li> Color theory
+			</nav>
+			<div id="pagepiling" class="content">
+				<div class="row section" id="title-row">
+					<h1 class="text-center">
+	        			Checklist for Web Design
+			    	</h1>
+				</div>
+				<div class="row section" id="html-rules">
+					<h2><a href="#nav">HTML Rules</a></h2>
+					<ul>
+						<li> Tags are always surrounded by angle brackets </li>
+						<li> Most tags come in pairs and surround the material they affect </li>
+						<li> The second tag always starts with a forward slash </li>
+						<li> When you start a tag within another tag, you have to close that inner tag before closing the outer tag </li>
+						<li> Many tags have can take arguments that change the tag's behavior </li>
+					</ul>
+				</div>
+				<div class="row section" id="css-rules">
+					<h2><a href="#nav">CSS Rules</a></h2>
+					<ul>
+						<li> Any HTML element can be a CSS selector </li>
+						<li> A simple selector can have different classes </li>
+						<li> Classes may also be declared without an associated element </li>
+						<li> ID selectors target only one unique element at a time </li>
+						<li> You can assign values to properties of CSS classes and elements </li>
+						<li> A property is assigned to a selector in order to change its style </li>
+					</ul>
+				</div>
+				<div class="row section" id="file-rules">
+					<h2><a href="#nav"> Technical and file management rules</a></h2>
+					<ul>
+						<li> Avoid extra long folder names and complicated folder structures but use well-named filenames instead </li>
+						<li> Use underscores between elements </li>
+						<li> Use hyphens between words within an element or capitalize the first letter of each word within an element </li>
+						<li> Elements should be ordered from general to specific detail of importance as much as possible </li>
+						<li> This is also true when elements include date and time stamps </li>
+					</ul>
+				</div>
+				<div class="row section" id="content-rules">
+					<h2><a href="#nav"> Content </a> </h2>
+					<ul>
+						<li> The content meets user needs, goals, and interests </li>
+						<li> The content is in a usable format, including headings, bulleted lists, tables, white space, or similar techniques is appropriate </li>
+						<li> The customer needs to get benefits from the content </li>
+						<li> Use attention grabbing headlines </li>
+						<li> Use consistent voice </li>
+					</ul>
+				</div>
+				<div class="row section" id="typography">
+					<h2><a href="#nav">Typography</a></h2>
+					<ul>
+						<li> Use Web fonts and Google Fonts </li>
+						<li> Use consistent styles </li>
+						<li> Make good use of white space </li>
+						<li> No more than 50-60 characters should be used per line </li>
+					</ul>
+				</div>
+				<div class="row section" id="color">
+					<h2><a href="#nav">Color theory</a></h2>
 						<ul>
 							<li> Pages provide high contrast between text and background to make it easy to read </li>
 							<li> Text and link colors are clearly different from one another </li>
 							<li> The colors fit the theme </li>
 							<li> The pages use color consistently </li>
 						</ul>
-					</li>
-					<li> Style tiles
+				</div>
+				<div class="row section" id="style-tiles">
+			    	 <h2><a href="#nav">Style tiles</a></h2>
 						<ul>
 							<li> Contain sample user interface elements </li>
 							<li> Define a color scheme </li>
 							<li> Show how typographical design will be used </li>
-							<li> Show the relationship between the client's brand and the proposed design </li>
+							<li> Show the relationship between the client's brand and the proposed design
+							</li>
 						</ul>
-					</li>
-					<li> Grid
-						<ul>
-							<li> Grids provide organization and visual balance </li>
-							<li> Grid columns provide the structure for the content columns </li>
-							<li> Grids used in responsive web design usually consist of 12 or 24 columns </li>
-							<li> The horizontal space the grid takes up - the width - grows and shrinks with the available display space </li>
-						</ul>
-					</li>
-				</ul>
+                 </div>
+                 <div class="row section" id="Grid">
+				 	 <h2><a href="#nav">Grid</a></h2>
+							<ul>
+								<li> Grids provide organization and visual balance </li>
+								<li> Grid columns provide the structure for the content columns </li>
+								<li> Grids used in responsive web design usually consist of 12 or 24 columns </li>
+								<li> The horizontal space the grid takes up - the width - grows and shrinks with the available display space </li>
+							</ul>
+				</div>
+				<div class="row section" id="saving">
+					<h2><a href="#nav"> Saving images correctly </a></h2>
+					<ul>
+						<li> Compress images with the right format at the lowest acceptable quality level </li>
+						<li> Look into using WebP for your image needs </li>
+						<li> Save your images with smaller sizes to improve your pages' load times </li>
+						<li> Investigate other interesting ways to get better compression, or transparency </li>
+					</ul>
+				</div>
+				<div class="row section" id="accedssibility">
+					<h2> <a href="#nav"> Accessibility/usability </a></h2>
+					<ul>
+						<li> The background and text have appropriate contrast </li>
+						<li> The website loads within 3 seconds </li>
+						<li> The site logo is easy to find and links to the home page </li>
+						<li> The About Us, Contact Us and Home links are easy to find </li>
+						<li> The text on the page is easy to read </li>
+						<li> The design, layout and organization of the site are professional and consistent </li>
+						<li> The navigation is clear, well organized and does not overwhelm the user </li>
+					</ul>
+				</div>
+				<div class="row section" id="code-rules">
+					<h2><a href="#nav"> Code Validation </a></h2>
+					<ul>
+						<li> Validate HTML and CSS </li>
+						<li> Validate Links  </li>
+						<li> Can be read by different browsers </li>
+					</ul>
+				</div>
 			</div>
-			<div class="slide">
-				<h2> Saving images correctly </h2>
-				<ul>
-					<li> Compress images with the right format at the lowest acceptable quality level </li>
-					<li> Look into using WebP for your image needs </li>
-					<li> Save your images with smaller sizes to improve your pages' load times </li>
-					<li> Investigate other interesting ways to get better compression, or transparency </li>
-				</ul>
-			</div>
-			<div class="slide">
-				<h2> Accessibility/usability </h2>
-				<ul>
-					<li> The background and text have appropriate contrast </li>
-					<li> The website loads within 3 seconds </li>
-					<li> The site logo is easy to find and links to the home page </li>
-					<li> The About Us, Contact Us and Home links are easy to find </li>
-					<li> The text on the page is easy to read </li>
-					<li> The design, layout and organization of the site are professional and consistent </li>
-					<li> The navigation is clear, well organized and does not overwhelm the user </li>
-				</ul>
-			</div>
-			<div class="slide">
-				<h2> Code Validation </h2>
-				<ul>
-					<li> Validate HTML and CSS </li>
-					<li> Validate Links  </li>
-					<li> Can be read by different browsers </li>
-				</ul>
-			</div>
-		</div>
 	</body>
 </html>
